@@ -1,0 +1,12 @@
+print("choose a word please:")
+p=input()
+a=p
+b=p[::-1]
+
+pali = True
+
+if pali:
+	print("True")
+else:
+	print("False")
+
