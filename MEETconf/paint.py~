@@ -1,0 +1,58 @@
+import turtle
+ht()
+tracer(0,1)
+#turtle.getscreen().listen()
+x,y = position()
+def square (x,y):
+    pu()
+    goto(x,y)
+    pd()
+    begin_fill()
+    fillcolor(color)
+    goto(x+50,y)
+    goto(x+50,y+50)
+    goto(x,y+50)
+    goto(x,y)
+    end_fill()
+
+def circle (x,y):
+    turtle.color(color)
+    pencolor()
+    pu()
+    goto(x,y)
+    pd()
+    dot(50)
+
+def change_colortored():
+    pencolor("red")
+    color("red")
+def change_colortorblue():
+    pencolor("blue")
+    color("blue")
+def change_colortoyellow():
+    pencolor("yellow")
+    color("yellow")
+def change_colortogreen():
+    pencolor("green")
+    color("green")
+def clear ():
+    turtle.clear()
+
+turtle.onclick(square,btn =1,add=True)
+turtle.onscreenclick(square,btn =1,add = True)
+turtle.ondrag(square,btn =1,add=True)
+    
+turtle.onclick(circle,btn =3,add=True)
+turtle.onscreenclick(circle,btn =3,add = True)
+turtle.ondrag(circle,btn =3,add=True)
+
+turtle.getscreen().onkeypress(change_colortored,"r")
+turtle.getscreen().onkeypress(change_colortoblue,"b")
+turtle.getscreen().onkeypress(change_colortoyellow,"y")
+turtle.getscreen().onkeypress(change_colortogreen,"g")
+turtle.getscreen().onkeypress(clear,"c")
+
+
+    
+turtle.listen()
+turtle.mainloop()
